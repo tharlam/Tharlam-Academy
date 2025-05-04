@@ -1,35 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ===== style sheet ===== -->
-<link rel="stylesheet" href="index.css">
-<script type="text/javascript" src="index.js" defer></script>
-
-<title>Tharlam-Academy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tharlam Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Toggle mobile menu visibility
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
 </head>
-<body>
-    <li><a href="index1.html">Home</a></li>
-    <div class="heading">
-        <h1>about us</h1>
-        <p>In 1981, His Eminence late Dezhung Jampa Kunga Tenpai Nyima, the supreme tulku of Dezhung, re-e</p>
-    <div class="container">
-        <section class="about">
-            <div class="about-image">
-                <img src="Untitled design.png">
-            </div>
-            <div class="about-content">
-                <h2>wharm imbrance</h2>
-                <p>In 1993–1994, His Holiness Sakya Gongma Trichen Dorjechang visited Tharlam Monastery and gave teachings on Dubthab Kuntue, a collection of sadhanas in the Sakya tradition compiled by Loter Wangpo. In 1994, the fourth supreme reincarnation of Dezhung Rinpoche was enthroned at Tharlam Monastery. In 2007, His Holiness Dagchen Sakya Jigdral Dorjechang gave the extensive and profound teachings of the Lamdre Lobshe for the second time. Ngor Luding Khenchen Dorjechang, Gawa Ngawang Lekpa’s reincarnation Gonpo Sonam Choden, and other revered masters blessed the monastery with their teachings, further enriching the Mahayana Dharma tradition.</p>
-                <a href="index1.html" class="read-more">Read More</a>
-            </div>
-        </section>
+<body class="bg-white text-gray-800 scroll-smooth">
+  <!-- Navigation Bar -->
+  <header class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">Tharlam Academy</h1>
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+        <a href="#languages" class="text-gray-700 hover:text-blue-600 font-medium">Languages</a>
+        <a href="#why" class="text-gray-700 hover:text-blue-600 font-medium">Why Us</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
 
-</body>
-</head>
-</html>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="#home" class="block text-gray-700 hover:text-blue-600">Home</a>
+      <a href="#about" class="block text-gray-700 hover:text-blue-600">About</a>
+      <a href="#languages" class="block text-gray-700 hover:text-blue-600">Languages</a>
+      <a href="#why" class="block text-gray-700 hover:text-blue-600">Why Us</a>
+      <a href="#contact" class="block text-gray-700 hover:text-blue-600">Contact</a>
+    </div>
+  </header>
 
+  <!-- Hero Section -->
+  <section id="home" class="bg-blue-600 text-white p-16 text-center mt-24">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Welcome to Tharlam Academy</h2>
+    <p class="text-lg">Master new languages. Discover new worlds.</p>
+    <button class="mt-6 px-6 py-2 bg-white text-blue-600 font-semibold rounded hover:bg-gray-100">
+      Explore Courses
+    </button>
+  </section>
+  
+
+<!-- Banner Image Section -->
+<section class="mt-10">
+    <img 
+      src="design.png" 
+      alt="Tharlam Academy Banner"
+      class="w-full h-auto object-cover"
+    />
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="p-6 md:p-8">
+    <h2 class="text-2xl font-bold mb-4">About Us</h2>
+    <p>
+      Tharlam Academy is a premier language institute offering immersive language courses taught by expert instructors. We help students achieve fluency and confidence in speaking.
+    </p>
+  </section>
+
+  <!-- Languages Offered -->
+  <section id="languages" class="bg-gray-100 p-6 md:p-8">
+    <h2 class="text-2xl font-bold mb-4">Languages We Teach</h2>
+    <ul class="list-disc pl-6">
+      <li>English</li>
+      <li>French</li>
+      <li>Chinese</li>
+      <li>Spanish</li>
+      <li>Japanese</li>
+    </ul>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="p-6 md:p-8">
+    <h2 class="text-2xl font-bold mb-4">Why Choose Tharlam?</h2>
+    <ul class="list-disc pl-6">
+      <li>Experienced instructors</li>
+      <li>Flexible schedules</li>
+      <li>Online & in-person classes</li>
+      <li>Interactive learning methods</li>
+    </ul>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="bg-blue-600 text-white p-6 text-center">
+    <p>© 2025 Tharlam Academy | Contact: info@tharlamacademy.com</p>
+  </footer>
+</body>
+</html>

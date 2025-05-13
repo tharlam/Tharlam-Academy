@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tharlam Academy</title>
+  <meta name="description" content="Tharlam Academy offers a holistic Buddhist and modern education for children and young monks in Kathmandu, Nepal. Support us today.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Roboto,sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      padding: 20px 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .nav-left h1 {
+      color: white;
+      font-size: 28px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .banner {
+      background: url('Untitled design.png') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 400px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    .banner-text {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    .banner-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .banner-button:hover {
+      background-color: #0056b3;
+    }
+
+    .two-column-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px auto;
+      border-bottom: 1px solid #ccc;
+      background-color: white;
+      scroll-margin-top: 100px;
+    }
+
+    .two-column-section .section-text {
+      flex: 1;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .two-column-section .section-image {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .two-column-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .section-text a {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .section-text a:hover {
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .two-column-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .two-column-section .section-text,
+      .two-column-section .section-image {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <h1>Tharlam Academy</h1>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#history" onclick="closeMenu()">History</a></li>
+          <li><a href="#message" onclick="closeMenu()">Message</a></li>
+          <li><a href="#mission" onclick="closeMenu()">Mission</a></li>
+          <li><a href="#curriculum" onclick="closeMenu()">Curriculum</a></li>
+          <li><a href="#schedule" onclick="closeMenu()">Schedule</a></li>
+          <li><a href="#support" onclick="closeMenu()">Support</a></li>
+          <li><a href="#students" onclick="closeMenu()">Students</a></li>
+          <li><a href="#principal" onclick="closeMenu()">Principal</a></li>
+          <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="banner-text">
+      <h1>Welcome to Tharlam Academy</h1>
+    </div>
+    <a href="sponsor.html" class="banner-button">Sponsor</a>
+  </div>
+
+  <div class="container">
+    <section id="history" class="two-column-section">
+      <div class="section-text">
+        <h3>History of Tharlam Academy</h3>
+        <p>Tharlam Academy was founded to spread language education worldwide. We strive to make learning accessible and engaging.</p>
+      </div>
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\px p.png" alt="Historical roots of Tharlam Academy">
+      </div>
+    </section>
+
+    <section id="message" class="two-column-section">
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\rinpo.png" alt="Message from Rinpoche">
+      </div>
+      <div class="section-text">
+        <h3>Message from H.E Dezhung Rinpoche</h3>
+        <p>We provide beginner, intermediate, and advanced courses focusing on grammar, vocabulary, and conversation.</p>
+      </div>
+    </section>
+
+    <section id="mission" class="two-column-section">
+      <div class="section-text">
+        <h3>Our Mission Statement</h3>
+        <p>At Tharlam Academy, we provide a holistic education grounded in Buddhist philosophy and modern knowledge. 
+        Our mission is to nurture the next generation of bodhisattvas—leaders dedicated to compassion, wisdom, 
+        and service to all sentient beings.</p>
+      </div>
+    </section>
+
+    <section id="curriculum" class="two-column-section">
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Curriculum overview">
+      </div>
+      <div class="section-text">
+        <h3>Curriculum Overview</h3>
+        <p>Combining traditional Buddhist practices with modern academic subjects, our curriculum nurtures the mind, heart, and spirit.</p>
+        <br>
+        <h4>Pre-Primary Level (Age 4–6)</h4>
+        <ul>
+          <li>Tibetan Language: Basic Reading and Writing</li>
+          <li>Basic English, Mathematics</li>
+          <li>Daily Prayers, Creative Activities, Physical Activities</li>
+        </ul>
+        <br>
+        <h4>Primary Level (Class 1–5)</h4>
+        <ul>
+          <li>Tibetan & English Language, Math, Science, Social Studies</li>
+          <li>Introduction to Buddhist Studies and Ritual Practices</li>
+        </ul>
+        <br>
+        <h4>Secondary Level (Class 6–8)</h4>
+        <ul>
+          <li>Advanced Tibetan Grammar, English Composition, Math, Science</li>
+          <li>Buddhist Studies: Four Noble Truths, Eightfold Path</li>
+          <li>Ritual Training: Torma, Puja, Sutra Chanting</li>
+        </ul>
+        <br>
+        <h4>Special Buddhist Practices</h4>
+        <p>Mandala Offering, Prostrations, Guru Yoga, Buddha Event Celebrations</p>
+      </div>
+    </section>
+
+    <section id="schedule" class="two-column-section">
+      <div class="section-text">
+        <h3>Daily Schedule</h3>
+        <ul>
+          <li>5:30 AM – Morning Puja and Prayers</li>
+          <li>7:00 AM – Breakfast</li>
+          <li>7:40 AM – Avalokiteshvara Prayer & Meditation</li>
+          <li>10:30 AM – Academic Classes</li>
+          <li>3:30 PM – Sports and Play Time</li>
+          <li>6:00 PM – Dinner Break</li>
+          <li>8:30 PM – Homework and Self-Study</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="support" class="two-column-section">
+      <div class="section-image">
+        <h3>How You Can Support Us</h3>
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Curriculum overview">
+      </div>
+      <div class="section-text">
+        <h4>Sponsorship Opportunities</h4>
+        <p>Your support can change the future of a young monk at Tharlam Academy. By sponsoring a student or program, you provide essential education, food, and resources for spiritual and academic growth.</p><br>
+        <h4>Sponsorship Options:</h4>
+        <ul>
+          <li>NC 3,000/month: Nourishment & Daily Needs for One Student</li>
+          <li>NC 5,000/month: Educational Materials & Classroom Support</li>
+          <li>NC 10,000/month: Teacher Salary and Training</li>
+          <li>NC 40,000: One Computer to Enhance Digital Learning</li>
+          <li>Custom Donations: Offer any amount from the heart</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Sponsor a Monk</h2>
+       <a href="sponsor.html" class="banner-button">Sponsor</a>
+      </div>
+    </section>
+
+    <section id="students" class="two-column-section">
+      <div class="section-image">
+        <h3>Our Students</h3>
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Students participating in class">
+      <div class="section-text">
+        <p><strong>Lobsang Nyima, Age 12 (Class 4): <br></strong> “Before joining Tharlam Academy, I could not read. Now I can recite prayers, study texts, and help others.”</p>
+      </div>
+      </div>
+
+     <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Students participating in class">
+      <div class="section-text">
+        <p><strong>Gyen Lekshay, Senior Teacher:</strong><br> “We’re grateful to all the sponsors who help us learn not only facts but how to be good human beings.”</p>
+      </div>
+      </div>
+    </section>
+
+    <section id="principal" class="two-column-section">
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Tharlam Principal">
+      </div>
+      <div class="section-text">
+        <h3>Message from the Principal</h3>
+        <p>"Supporting a child’s education is like planting the seed of wisdom in this world. We invite you to walk this path with us—gently, generously, and with joy."   Tenpa Gyaltsen, Principal</p><br>
+        <h4>Related Buddhist Inspiration</h4>
+        <p>"As a lamp lights another lamp, thousands of lamps can be lit from one. So too, wisdom shared spreads boundless benefit."</p>
+      </div>
+    </section>
+
+    <section id="contact" class="two-column-section">
+      <div class="section-text">
+        <h3>Contact Us</h3>
+        <p>
+          Tharlam Monastery,<br>
+          Address: Boudha-6, Kathmandu, Nepal<br>
+          Email: <a href="mailto:Tharlamacademy@gmail.com">Tharlamacademy@gmail.com</a><br>
+          Phone: 0000000000<br>
+          We accept only Email and WhatsApp messages.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tharlam Academy. We are Monks.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.querySelector('.nav-links').classList.remove('active');
+    }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      const nav = document.querySelector('.nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tharlam Academy</title>
+  <meta name="description" content="Tharlam Academy offers a holistic Buddhist and modern education for children and young monks in Kathmandu, Nepal. Support us today.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Roboto,sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      padding: 20px 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .nav-left h3 {
+      color: white;
+      font-size: 18px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .banner {
+      background: url('Untitled design.png') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 400px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    .banner-text {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+
+    .two-column-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px auto;
+      border-bottom: 1px solid #ccc;
+      background-color: white;
+      scroll-margin-top: 100px;
+    }
+
+    .two-column-section .section-text {
+      flex: 1;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .two-column-section .section-image {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .two-column-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .section-text a {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .section-text a:hover {
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .two-column-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .two-column-section .section-text,
+      .two-column-section .section-image {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <h3>Fundraising/Sponsorship Page</h3>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#section 1" onclick="closeMenu()">Section 1</a></li>
+          <li><a href="#section 2" onclick="closeMenu()">Section 2</a></li>
+          <li><a href="#section 3" onclick="closeMenu()">Section 3</a></li>
+          <li><a href="#section 4" onclick="closeMenu()">Section 4</a></li>
+          <li><a href="#section 5" onclick="closeMenu()">Section 5</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="banner-text">
+      <h1>Who we are</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <section id="section 1" class="two-column-section">
+      <div class="section-text">
+        <h3>Why We Exit</h3>
+        <p>At Tharlam Academy, we believe the mind is not a vessel to be filled but a light to be revealed. Every young monk carries within him the potential for deep wisdom, 
+            compassion, and understanding. With your support, we provide a holistic education grounded in Buddhist values and modern knowledge. 
+            Our mission is to cultivate peacekeepers, leaders, and bodhisattvas who will contribute to the well-being of all sentient beings.</p>
+      </div>
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Historical roots of Tharlam Academy">
+      </div>
+    </section>
+
+    <section id="section 2" class="two-column-section">
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Message from Rinpoche">
+      </div>
+      <div class="section-text">
+        <h3>Impact of Your Sponsorship</h3>
+        <p>Your Sponsorship Make This Possible</p><br>
+        <ul>
+          <li>NC 3,000/month – Nourishment & daily needs for one student </li>
+          <li>NC 5,000/month – Educational materials and classroom support</li>
+          <li>NC 10,000/month – Teacher salary and training </li>
+          <li>NC 40,000 (one-time) – One computer to enhance digital learning</li>
+          <li>Custom – Offer what you can from the heart </li>
+        </ul>
+      </div>  
+    </section>
+
+    <section id="section 3" class="two-column-section">
+      <div class="section-image">
+        <h3>Our Students</h3>
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Students participating in class">
+      <div class="section-text">
+        <p><strong>Lobsang Nyima, Age 12 (Class 4): <br></strong> “Before joining Tharlam Academy, I could not read. Now I can recite prayers, study texts, and help others.”</p>
+      </div>
+      </div>
+
+     <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Students participating in class">
+      <div class="section-text">
+        <p><strong>Gyen Lekshay, Senior Teacher:</strong><br> “We’re grateful to all the sponsors who help us learn not only facts but how to be good human beings.”</p>
+      </div>
+      </div>
+    </section>
+
+    <section id="section 4" class="two-column-section">
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Curriculum overview">
+      </div>
+      <div class="section-text">
+        <h3>How to Give </h3>
+        <p>Three Simple Ways to Support</p><br>
+        <ul>
+          <li>Sponsor a Monk – Monthly or annual commitment to support one student’s education, nourishment, and spiritual growth. </li>
+          <li>Fund a Program – Support vital programs like teacher training, digital classrooms, health care, and nutrition. </li>
+          <li>One-Time Gift – Every offering makes a difference. A donation of any amount helps further our mission.  </li>
+        </ul>
+      </div> 
+      <div class="section-text">
+        <h3>Additional Options: </h3>
+        <ul>
+          <li>Sponsor a classroom  </li>
+          <li>Contribute to library or ritual supplies </li>
+          <li>Support medical care or festival events  </li>
+        </ul>
+      </div> 
+    </section>
+
+    <section id="section 5" class="two-column-section">
+      <div class="section-image">
+        <img src="c:\Users\Acer\Downloads\PHOTO.png" alt="Tharlam Principal">
+      </div>
+      <div class="section-text">
+        <h3>Message from the Principal</h3>
+        <p>"Supporting a child’s education is like planting the seed of wisdom in this world. We invite you to walk this path with us—gently, generously, and with joy."   Tenpa Gyaltsen, Principal</p><br>
+        <h4>Related Buddhist Inspiration</h4>
+        <p>"As a lamp lights another lamp, thousands of lamps can be lit from one. So too, wisdom shared spreads boundless benefit."</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tharlam Academy. We are Monks.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.querySelector('.nav-links').classList.remove('active');
+    }
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      const nav = document.querySelector('.nav-links');
+      const hamburger = document.querySelector('.hamburger');
+      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  </script>
+
+</body>
+</html>
